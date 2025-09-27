@@ -1,0 +1,65 @@
+@import './variables';
+@import './mixins';
+
+:root {
+  --bg: #{$bg-light};
+  --surface: #{$surface-light};
+  --text: #{$text-light};
+  --muted: #{$muted-light};
+  --primary: #{$primary};
+  --accent: #{$accent};
+}
+
+:root[data-theme='dark'] {
+  --bg: #{$bg};
+  --surface: #{$surface};
+  --text: #{$text};
+  --muted: #{$muted};
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: $font-sans;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container { @include container; }
+.section { padding: 4rem 0; }
+
+.btn { @include button-base; background: var(--primary); color: #111; }
+.btn--outline { background: transparent; border: 1px solid var(--primary); color: var(--text); box-shadow: none; }
+
+.site-header {
+  position: sticky; top: 0; backdrop-filter: blur(8px);
+  background: var(--surface);
+  z-index: 20;
+  &__inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+}
+
+.logo { font-weight: 800; }
+
+.nav { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+.nav a { padding: .5rem .8rem; border-radius: 10px; }
+
+.hero {
+  display: grid; grid-template-columns: 160px 1fr; gap: 1.5rem; align-items: center; padding: 3rem 0 2rem;
+  &__avatar { width: 160px; height: 160px; object-fit: cover; border-radius: 50%; box-shadow: $shadow; }
+}
+
+.card {
+  background: var(--surface);
+  border-radius: $radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+  &__img { aspect-ratio: 16/10; object-fit: cover; }
+  &__body { padding: 1rem; }
+}
+
+.theme-toggle {
+  position: fixed; right: 1rem; bottom: 1rem; width: 46px; height: 46px;
+  border-radius: 999px; border: 1px solid rgba(255,255,255,.12);
+  background: var(--surface); box-shadow: $shadow; font-size: 1.1rem; cursor: pointer;
+}
