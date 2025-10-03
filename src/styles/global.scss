@@ -63,3 +63,17 @@ body {
   border-radius: 999px; border: 1px solid rgba(255,255,255,.12);
   background: var(--surface); box-shadow: $shadow; font-size: 1.1rem; cursor: pointer;
 }
+
+
+/* === Forcer 2 colonnes uniquement pour la section Projets === */
+#projects .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  #projects .grid {
+    grid-template-columns: 1fr !important;
+  }
+}
