@@ -23,7 +23,7 @@ const projects = [
     id: 'p3',
     title: 'Kasa',
     description: 'Site de location appartements',
-    tags: ['React, Scss'],
+    tags: ['React', 'Scss','Javascript'],
     image: '/src/assets/Kasa.webp',
     demo: 'https://projet5-kasa.vercel.app',
     repo: 'https://github.com/Guinoob27/Projet5-kasa',
