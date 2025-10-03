@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Header from './components/Header.jsx'
 import Hero from './components/Hero.jsx'
 import ProjectCard from './components/ProjectCard.jsx'
-import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import projects from './data/projects.js'
 import ThemeToggle from './components/ThemeToggle.jsx'
@@ -34,19 +33,8 @@ export default function App() {
             ))}
           </div>
         </section>
-        <section id="skills" className="container section">
-          <h2 className="section__title">Compétences</h2>
-          <ul className="skills">
-            <li>React</li>
-            <li>SASS/SCSS</li>
-            <li>Node.js</li>
-            <li>.....</li>
-          </ul>
-        </section>
-        <section id="contact" className="container section">
-          <h2 className="section__title">Contact</h2>
-          <Contact />
-        </section>
+        
+        
       </main>
       <ThemeToggle theme={theme} setTheme={setTheme} />
       <Footer />

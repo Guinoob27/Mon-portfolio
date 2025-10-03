@@ -3,7 +3,7 @@ export default function Hero() {
   let src = "https://picsum.photos/seed/profile/300/300";
   try {
     // Cette import dynamique échouera si le fichier n'existe pas, on garde alors le placeholder
-    src = new URL("../assets/My Snapshot_1.jpg", import.meta.url).href;
+    src = new URL("../assets/Moi.webp", import.meta.url).href;
   } catch (e) {}
 
   return (
